@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+
+:root {
+  --principal-font-family: "Matemasie", sans-serif;
+}
+
+/* Reseteo de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos básicos del cuerpo */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 0;
+  }
+  
+  /* Estilo del encabezado */
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  /* Estilo del campo de búsqueda */
+  input[type="search"] {
+    width: calc(100% - 2rem);
+    max-width: 600px;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Estilo del contenedor principal */
+  main {
+    padding: 1rem;
+  }
+  
+  /* Estilo de los contenedores de sección */
+  .container-form,
+  .gif {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* Estilo de los GIFs */
+  .gif {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .gif > div {
+    flex: 1 1 calc(25% - 1rem); /* Ajusta el tamaño de los GIFs */
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .gif img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Estilo del pie de página */
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  footer h2 {
+    margin: 0;
+  }
+  
