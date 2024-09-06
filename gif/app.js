@@ -1,6 +1,7 @@
-const apiKey = "YwuSVJOSyuP5FgIz1kAalS3zpL6KIcej"
+const apiKey = "ZMLXGbxuFM8faQ3caGQMTFtgLj8JRBCZ"
 const GifSearch = document.getElementById('gif-search')
 const url = `http://api.giphy.com/v1/gifs/trending?api_key=${apiKey}`
+const url_search=`http://api.giphy.com/v1/gifs/search?api_key=`+apiKey+`&q=`
 const gifContainer = document.getElementById('gif')
 
 
@@ -19,18 +20,23 @@ const makegif = (mygif)=>{
 
 const render = (gifs)=>{
     gifContainer.innerHTML=""
-    gifs.forEach(gifto=>makegif(gifto))
-    console.log(gifto)
+    gifs.forEach((gifto)=>{
+        makegif(gifto);
+    })
 }
 
 const getgif = async()=>{
-    const response = await fetch(`http://api.giphy.com/v1/gifs/trending?api_key=${apiKey}`)
+    let query= url+"&limit=14"
+    const response = await fetch(query)
     const data = await response.json()
-    data.data.forEach(gifto=>makegif(gifto)) 
+    data.data.forEach((gifto)=>{makegif(gifto)}) 
 }
 
 const searchGif = async()=>{
-    const response = await fetch(url)
+    const response = await fetch(url_search+GifSearch.value+"&limit=14")
+    const data = await response.json()
+    render(data.data)
 }
 
 window.addEventListener('DOMContentLoaded',getgif)
+GifSearch.addEventListener('keyup',searchGif)
