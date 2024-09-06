@@ -1,4 +1,4 @@
-const apiKey = "ZMLXGbxuFM8faQ3caGQMTFtgLj8JRBCZ"
+const apiKey = "lJJE56M5im4gZI8B7LCzCAJCvDsvb6yR"
 const GifSearch = document.getElementById('gif-search')
 const url = `http://api.giphy.com/v1/gifs/trending?api_key=${apiKey}`
 const url_search=`http://api.giphy.com/v1/gifs/search?api_key=`+apiKey+`&q=`
